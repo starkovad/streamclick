@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  stream-click:
+    build: .
+    command: 'streamlit run streamclick/streamclick.py'
+    ports:
+        - 8501:8501
+    volumes:
+        - "./streamclick:/streamclick/streamclick"
+    depends_on:
+        - "click-server"
+
+  click-server:
+    hostname: clickhouse
+    image: yandex/clickhouse-server
+    ports:
+      - 9001:9000
+      - 9010:9009
+      - 8124:8123
+    volumes:
+      - ./clickdata.sh:/docker-entrypoint-initdb.d/init-db.sh
