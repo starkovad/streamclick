@@ -20,4 +20,5 @@ services:
       - 9010:9009
       - 8124:8123
     volumes:
-      - ./clickdata.sh:/docker-entrypoint-initdb.d/init-db.sh
+      - ./clickhouse/clickdata.sh:/docker-entrypoint-initdb.d/init-db.sh
+      - ./clickhouse/clickdata:/opt/clickhouse/data
