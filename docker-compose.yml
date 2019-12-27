@@ -4,7 +4,9 @@ services:
 
   stream-click:
     build: .
-    command: 'streamlit run streamclick/streamclick.py'
+    command: >
+      sh -c "python3 streamclick/etl.py &&
+             streamlit run streamclick/streamclick.py" 
     ports:
         - 8501:8501
     volumes:
