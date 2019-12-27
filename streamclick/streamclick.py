@@ -1,9 +1,6 @@
 import streamlit as st
-from apis import Api, Oanda
 from clickhouse_driver import Client
-
 import plotly.graph_objects as go
-
 import pandas as pd
 
 def inst_interface(key, current_inst_type, insts, granularity):
