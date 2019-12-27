@@ -1,3 +1,5 @@
 streamlit==0.51
 clickhouse-driver
 oandapyV20
+pyopenssl
+plotly
