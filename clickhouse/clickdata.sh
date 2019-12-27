@@ -23,4 +23,13 @@ clickhouse client -n <<-EOSQL
     create table oanda.metal_M15 (datetime DateTime, inst String, price Float32) ENGINE = Log;
     create table oanda.metal_M30 (datetime DateTime, inst String, price Float32) ENGINE = Log;
     create table oanda.metal_H1 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+
+    create table oanda.cfd_M2 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_M3 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_M4 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_M5 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_M10 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_M15 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_M30 (datetime DateTime, inst String, price Float32) ENGINE = Log;
+    create table oanda.cfd_H1 (datetime DateTime, inst String, price Float32) ENGINE = Log;
 EOSQL
