@@ -1,4 +1,4 @@
-streamlit==0.51
+streamlit==1.37.0
 clickhouse-driver
 oandapyV20
 pyopenssl
